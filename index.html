@@ -1,0 +1,781 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> TOU LIMEN</title>
+        <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-           T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+           
+    </head>
+    <body id="top" ng-app="app">
+        <nav  class="sticky-top navbar navbar-expand-lg "  ng-controller="ctr">
+  <div class="container-fluid">
+      
+    <a class="navbar-brand" href="index.html"> <img src="Pictures/TOU LIMEN.jpg" alt="TOU LIMEN 2025"  width ="80" height="65"></a>
+
+      <button type="button" class="btn btn-outline-light "><a class=" fsize21 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" target="_blank" href=" https://whatsapp.com/channel/0029Vb6RiYt30LKKRJ6olb1Z"> <img src="Pictures/whatsapp.svg" alt="Whatsapp" width="20" height="14"> <br> Chaine Whatsapp </a> </button> 
+
+    <button id="btt" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span id="icon" class="navbar-toggler-icon"></span>
+    </button>
+
+          
+
+    <div class="spaceral dropdown-center container-fluid d-md-block d-lg-none ">
+ 
+
+    
+        <div class="row" >
+      
+            <a class="nav-link dropdown-toggle fsize2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                BUTEURS
+              </a>
+              <div class="dropdown-menu text-center ">
+                  <div class="offset-10 col-2 fsize"> Buts</div>
+                  <div class="col-8" > <span class="fsize"> Nom des Joueurs</span> </div>
+                 <div class="fsize2 col-8" >  Equipes </div> 
+                  <li><hr class="dropdown-divider"></li>
+                  
+                   <div ng-repeat="item in buteurs">
+                  <li><hr class="dropdown-divider"></li>
+                   <div class="offset-10 col-2 fsize"> -- </div>
+                   <div class="col-8" ><span class="fsize"> --  </span></div>
+                 <div class="fsize2 col-8" > -- </div> 
+                     </div> 
+           
+          
+           </div>
+        </div>
+    </div> 
+
+
+       
+ <div class="collapse navbar-collapse" id="navbarSupportedContent">
+   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+     <li class="nav-item d-block ">
+       <a class="nav-link active" aria-current="page" href="#top">MENU</a>
+     </li>
+     <li class="nav-item d-block">
+       <a class="nav-link" href="#container-carousel">MATCHS</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="#Matches">GROUPES</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="#container-carousel2">ELIMINATOIRES</a>
+     </li>  
+      
+     
+   </ul>
+ </div>
+
+<div class="spaceral2 dropdown-center container-fluid d-none d-sm-none d-md-none d-lg-block ">
+ 
+        <div class="row" >
+      
+            <a class="nav-link dropdown-toggle fsize2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                BUTEURS
+              </a>
+              <div class="dropdown-menu text-center ">
+                  <div class="offset-10 col-2 fsize"> Buts</div>
+                  <div class="col-8" > <span class="fsize"> Nom des Joueurs</span> </div>
+                 <div class="fsize2 col-8" >  Equipes </div> 
+                  <li><hr class="dropdown-divider"></li>
+                  
+                   <div ng-repeat="item in buteurs">
+                  <li><hr class="dropdown-divider"></li>
+                   <div class="offset-10 col-2 fsize"> --</div>
+                   <div class="col-8" ><span class="fsize"> --  </span></div>
+                 <div class="fsize2 col-8" > -- </div> 
+                     </div> 
+                     
+           
+          
+           </div>
+        </div>
+    </div> 
+       
+</div>
+</nav>
+        <div id= "head-title"class="container-fluid ">
+            <div class="row text-center">
+              <div class="uptoclick col-12">
+                <a class="nav-link" href="#"> ⚽⚽⚽ <br>TOU LIMEN 2025 </a>
+              </div>
+            
+            </div>          
+        </div>
+
+         <div id="container-carousel"class="container-fluid   d-block d-sm-block d-md-none">
+      <div id="row.carousel" class="row">
+          <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+               </div>
+           
+      
+       
+   </div>
+
+          
+      </div>
+      </div>  <!-- end of <div.container-fluid carousel>     --> 
+
+
+      
+    
+      <div id="Matches" class="holder container-fluid" ng-controller="ctr">
+          <h3 class="text-center"> Prochain Match </h3>
+          
+          
+          <div class=" fsize  row">
+               <hr>
+              <div class="match-n  row "  ng-repeat= "item in matchesGroup | filter : '24 Aout' ">
+              <div class=" text-center col-2 fsize2">08 Sept<br> 17H00 </div>   <!-- Heure de match-->
+              <div class=" bl col-8">
+      
+                  <div class="{{item.class1}}">LIMITE FC</div>
+                  <div class="{{item.class2}}">A. DES JEUNES</div>
+              </div>
+                  <div class=" text-center col-2"> <span class="{{item.class1}}">--</span><br> <span class="{{item.class2}}" >--</span>  </div>
+                 
+           </div> <!-- end of div <match-n></match-n> -->
+
+                
+              <div class="space"> </div>
+           
+           
+            </div> 
+              <div class="osffset-4 col-6"> 
+           <a class="viewall" href="matches.html"> Voir Tous les Matchs >></a> 
+          </div>   
+
+          
+
+
+          
+      </div><!-- end of <div.container-fluid holder Matches >     --> 
+
+
+        <div id="container-carousel2"class="container-fluid">
+          <div id="row.carousel2" class="row">
+              <div id="carouselExampleCaptions2" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                 </div>
+                   <h3 class="text-center"> GROUPES </h3>
+               <div class="carousel-inner">
+                 <div class="carousel-item active">
+                  <div class="holder container-fluid">
+              
+              <div class=" fsize  row">
+                  
+                  <h4 class="text-center" >Groupe A</h4>
+                  <div class="match-n  row text-center ">
+                     <div class=" col-1"> #</div>
+                     <div class=" col-3"><p>Equipe</p> </div>   <!-- Heure de match-->
+                     <div class="  col-1">
+                         J
+                     </div>
+                     <div class="  col-1">
+                         V
+                     </div>
+                     <div class="  col-1">
+                         N
+                     </div>
+                     <div class="  col-1">
+                         D
+                     </div>
+                     <div class="  col-1">
+                         BM
+                     </div>
+                     <div class="  col-1">
+                         BE
+                     </div>
+                     <div class="  col-1">
+                         DIFF
+                     </div>
+                     <div class="  col-1">
+                         PTS
+                     </div> 
+                   </div> <!-- end of div <match-n></match-n> -->
+                  
+                  <div class="match-n  row text-center ">
+                  <div class=" col-1"> 1 </div>
+                  <div class="  col-3"> TÈT FRÈT </div>   <!-- Heure de match-->
+                  <div class=" text-center  col-1">
+                      4
+                  </div>
+                  <div class="  col-1">
+                      3
+                  </div>
+                  <div class="  col-1">
+                     0
+                 </div>
+                 <div class="  col-1">
+                     1
+                 </div>
+                 <div class="  col-1">
+                     6
+                 </div>
+                 <div class="  col-1">
+                     1
+                 </div>
+                 <div class="  col-1">
+                     +5
+                 </div>
+                  <div class="  col-1">
+                      9
+                  </div> 
+                 </div> <!-- end of div <match-n></match-n> --> 
+                   <hr>
+ 
+                  <div class="match-n  row text-center ">
+                  <div class=" col-1"> 2 </div>
+                  <div class="  col-3">B. AUX P. </div>   <!-- Heure de match-->
+                  <div class=" text-center  col-1">
+                     4
+                 </div>
+                 <div class="  col-1">
+                     1
+                 </div>
+                 <div class="  col-1">
+                     3
+                </div>
+                <div class="  col-1">
+                     0
+                </div>
+                <div class="  col-1">
+                     4
+                </div>
+                <div class="  col-1">
+                     3
+                </div>
+                <div class="  col-1">
+                    +1
+                </div>
+                 <div class="  col-1">
+                     6
+                 </div> 
+                 </div> <!-- end of div <match-n></match-n> --> 
+                 
+                  <hr>
+ 
+                   <div class="match-n  row text-center ">
+                  <div class=" col-1"> 3</div>
+                  <div class="  col-3">TJF</div>   <!-- Heure de match-->
+                  <div class=" text-center  col-1">
+                     4
+                 </div>
+                 <div class="  col-1">
+                     1
+                 </div>
+                 <div class="  col-1">
+                     2
+                </div>
+                <div class="  col-1">
+                     1
+                </div>
+                <div class="  col-1">
+                     4
+                </div>
+                <div class="  col-1">
+                     4
+                </div>
+                <div class="  col-1">
+                     0
+                </div>
+                 <div class="  col-1">
+                     5
+                 </div> 
+                 </div> <!-- end of div <match-n></match-n> -->
+ 
+                 <hr>
+ 
+                 <div class="match-n  row text-center ">
+                <div class=" col-1"> 4 </div>
+                <div class="  col-3">MONACO</div>   <!-- Heure de match-->
+                <div class=" text-center  col-1">
+                 4
+             </div>
+             <div class="  col-1">
+                 1
+             </div>
+             <div class="  col-1">
+                 1
+            </div>
+            <div class="  col-1">
+                 2
+            </div>
+            <div class="  col-1">
+                 6
+            </div>
+            <div class="  col-1">
+                 7
+            </div>
+            <div class="  col-1">
+                 -1
+            </div>
+             <div class="  col-1">
+                  4
+             </div> 
+               </div> <!-- end of div <match-n></match-n> -->
+               <hr>
+
+               <div class="match-n row text-center ">
+                <div class=" col-1"> 5 </div>
+                <div class="  col-3">LANON</div>   <!-- Heure de match-->
+                <div class=" text-center  col-1">
+                   4
+               </div>
+               <div class="  col-1">
+                   0
+               </div>
+               <div class="  col-1">
+                   2
+              </div>
+              <div class="  col-1">
+                   2
+              </div>
+              <div class="  col-1">
+                   5
+              </div>
+              <div class="  col-1">
+                   10
+              </div>
+              <div class="  col-1">
+                   -5
+              </div>
+               <div class="  col-1">
+                   2
+               </div> 
+               </div> <!-- end of div <match-n></match-n> --> 
+               <hr>
+              
+               <div class="space"> </div>
+                   <div class="text fsize"> Si deux équipes (ou plus) ont le même nombre de points, les règles suivantes s'appliquent pour les départager:  <div>1. Différence de buts</div> <div>2. Buts marques </div>  <div>3. Confrontations directes</div>  <div>4. Fair-play </div>5. Tirage au sort </div>
+                   
+                </div>   
+           
+           
+            
+
+                <footer id="foot" class="row text-center">
+     
+            <section  class="col-sm-6">
+                <h4>INFO </h4>
+              <div class="row"> 
+                  <div class="col-6"> FC JANMET <br> <p class="fsize2"> Tenant du Titre (1)  </p></div>
+                  <div class="col-6"> FC JANMET <br> <p class="fsize2"> Le plus Titré (1) </p> </div>
+                  <br> <p class="fsize">EQUIPES PARTICIPANTES </p> <br> <p class="fsize"> 10</p>
+            <hr class=" d-sm-none">
+               
+               </div>
+          
+         </section>
+  
+         <section  class="col-sm-6">
+            <h4>LE COMITE ORGANISATEUR </h4>
+          <div class="row"> 
+               <div class="col-6"> Johnson TALLEYRAND <br> <p class="fsize2"> PRESIDENT </p></div>
+              <div class="col-6"> Wasken SEVERRE <br> <p class="fsize2">VICE-PRESIDENT </p> </div>
+              <div class="col-6"> Paul-Emile SAINT-JEAN <br> <p class="fsize2">RAPPORTEUR</p> </div>
+              <div class="col-6"> Walderme CHARLES<br> <p class="fsize2"> MEMBRE  </p></div>
+              <div class="col-6"> Erilien LAMANDIEU <br> <p class="fsize2">MEMBRE </p> </div>
+              <div class="col-6"> Marcov PETIT-HOMME <br> <p class="fsize2">MEMBRE </p> </div>
+              <div class="col-6"> Rocksen EXAEL<br> <p class="fsize2"> MEMBRE  </p></div>
+              <div class="col-6"> Eliders FLEURITUS <br> <p class="fsize2">MEMBRE </p> </div>
+              <div class="col-6"> Lucsonner LAGUERRE <br> <p class="fsize2">TRESORIER </p> </div>
+              <div class="col-6"> De Vinci EXAEL <br> <p class="fsize2">DELEGUE   </p></div>
+              <div class="col-6"> Morgan PETIT-HOMME <br> <p class="fsize2">DELEGUE ADJOINT  </p> </div>
+              <div class="col-6"> Jospin DORIVAL <br> <p class="fsize2">SECRETAIRE </p> </div>
+              
+              
+        <hr class=" d-sm-none">
+           
+           </div>
+      
+      </section>     
+            
+               <!--<section id="testimonials" class="col-sm-4">
+                   <h4> MEILLEURS COMMENTAIRES </h4>
+                 <p>"C'est étonnant aux yeux de toutes les anciennes fédérations du coin! Quelle nouveauté!!"</p>
+                 <p>"Le Comité a vraiment fait un travail exceptionnel cette année! Ce championnat est tout simplement remarquable!"</p>
+               </section> -->
+             <div class="text-center">&copy; TOU LIMEN 2025</div>
+           </footer>
+
+        </div><!-- end of <div.container-fluid holder>     -->
+        </div> 
+                   <div class="carousel-item ">
+                    <div class="holder container-fluid">
+              
+                <div class=" fsize  row">
+                    
+                    <h4 class="text-center" >Groupe B</h4>
+                    <div class="match-n row text-center ">
+                       <div class=" col-1"> #</div>
+                       <div class=" col-3"><p>Equipe</p> </div>   <!-- Heure de match-->
+                       <div class="  col-1">
+                           J
+                       </div>
+                       <div class="  col-1">
+                           V
+                       </div>
+                       <div class="  col-1">
+                           N
+                       </div>
+                       <div class="  col-1">
+                           D
+                       </div>
+                       <div class="  col-1">
+                           BM
+                       </div>
+                       <div class="  col-1">
+                           BE
+                       </div>
+                       <div class="  col-1">
+                           DIFF
+                       </div>
+                       <div class="  col-1">
+                           PTS
+                       </div> 
+                     </div> <!-- end of div <match-n></match-n> -->  
+                       
+   
+                     <div class="match-n  row text-center ">
+                    <div class=" col-1"> 1 </div>
+                    <div class="  col-3">LAVE LÈ</div>   <!-- Heure de match-->
+                    <div class=" text-center  col-1">
+                       4
+                   </div>
+                   <div class="  col-1">
+                       2
+                   </div>
+                   <div class="  col-1">
+                       2
+                  </div>
+                  <div class="  col-1">
+                       0
+                  </div>
+                  <div class="  col-1">
+                       4
+                  </div>
+                  <div class="  col-1">
+                       1
+                  </div>
+                  <div class="  col-1">
+                       +3
+                  </div>
+                   <div class="  col-1">
+                       8
+                   </div> 
+                   </div> <!-- end of div <match-n></match-n> --> 
+                    <hr>
+                 
+                  <div class="match-n  row text-center ">
+                    <div class=" col-1"> 2 </div>
+                    <div class="  col-3">A. DES J.</div>   <!-- Heure de match-->
+                    <div class=" text-center  col-1">
+                       4
+                   </div>
+                   <div class="  col-1">
+                       2
+                   </div>
+                   <div class="  col-1">
+                       1
+                  </div>
+                  <div class="  col-1">
+                       1
+                  </div>
+                  <div class="  col-1">
+                       3
+                  </div>
+                  <div class="  col-1">
+                       3
+                  </div>
+                  <div class="  col-1">
+                       0
+                  </div>
+                   <div class="  col-1">
+                       7
+                   </div> 
+                   </div> <!-- end of div <match-n></match-n> -->
+                   
+                     <hr>
+                     <div class="match-n  row text-center ">
+                    <div class=" col-1"> 3 </div>
+                    <div class="  col-3">TOUP P YO</div>   <!-- Heure de match-->
+                    <div class=" text-center  col-1">
+                       4
+                   </div>
+                   <div class="  col-1">
+                       1
+                   </div>
+                   <div class="  col-1">
+                       2
+                  </div>
+                  <div class="  col-1">
+                       1
+                  </div>
+                  <div class="  col-1">
+                       3
+                  </div>
+                  <div class="  col-1">
+                       3
+                  </div>
+                  <div class="  col-1">
+                       0
+                  </div>
+                   <div class="  col-1">
+                       5
+                   </div> 
+                   </div> <!-- end of div <match-n></match-n> --> 
+                    <hr>
+                    
+                     <div class="match-n row text-center ">
+                    <div class=" col-1"> 4 </div>
+                    <div class="  col-3">LIMITE</div>   <!-- Heure de match-->
+                    <div class=" text-center  col-1">
+                       4
+                   </div>
+                   <div class="  col-1">
+                       1
+                   </div>
+                   <div class="  col-1">
+                       1
+                  </div>
+                  <div class="  col-1">
+                       2
+                  </div>
+                  <div class="  col-1">
+                       5
+                  </div>
+                  <div class="  col-1">
+                       5
+                  </div>
+                  <div class="  col-1">
+                       0
+                  </div>
+                   <div class="  col-1">
+                       4
+                   </div> 
+                   </div> <!-- end of div <match-n></match-n> --> 
+                   <hr>
+
+                   <div class="match-n row text-center ">
+                    <div class=" col-1"> 5 </div>
+                    <div class="  col-3">T-JEUNES</div>   <!-- Heure de match-->
+                    <div class=" text-center  col-1">
+                       4
+                   </div>
+                   <div class="  col-1">
+                       0
+                   </div>
+                   <div class="  col-1">
+                       2
+                  </div>
+                  <div class="  col-1">
+                       2
+                  </div>
+                  <div class="  col-1">
+                       5
+                  </div>
+                  <div class="  col-1">
+                       8
+                  </div>
+                  <div class="  col-1">
+                       -4
+                  </div>
+                   <div class="  col-1">
+                       2
+                   </div> 
+                   </div> <!-- end of div <match-n></match-n> --> 
+                   <hr>
+                   <div class="space"> </div>
+                   <div class="text fsize"> Si deux équipes (ou plus) ont le même nombre de points, les règles suivantes s'appliquent pour les départager:  <div>1. Différence de buts</div> <div>2. Buts marques </div>  <div>3. Confrontations directes</div>  <div>4. Fair-play </div>5. Tirage au sort </div>
+                </div>
+
+                </div>   
+
+                         <div id="Knockout" class="holder container-fluid tex-center" ng-controller="ctr">
+           
+           <h4 class="text-center"> ELIMINATOIRES</h4>
+           <div id="idKnockout" class=" fsize2 row" >
+
+               <!-- start of huitieme de final -->
+              <div id="huitieme" class="match-n classKnockout col-4 row ">
+
+                  
+                  <div class="row noPad knockoutline " >
+                  <div  class="text-center noPad"> Quart de Finale</div>
+               <div class="noPad text-center col-3 fsize21"> 24 Aout<br> 17H00 </div>   <!-- Heure de match-->
+               <div class=" noPad1 bl2 col-8">
+                   
+                   <div class="{{matchesGroup[20].class1}} win fsize">TÈT FRÈT</div>
+                   <div class="{{matchesGroup[20].class2}} win fsize">LIMITE</div>
+               </div>
+               <div class=" noPad text-center col-1"> <span class="{{matchesGroup[20].class1}} lost">0</span><br> <span class="{{matchesGroup[20].class2}} win" >3</span>  </div>
+                  
+            </div> <!-- end of div <match-n></match-n> --> 
+                  
+
+              <div class="row noPad knockoutline " >
+                  <div  class="text-center noPad"> Quart de Finale</div>
+               <div class="noPad text-center col-3 fsize21"> 26 Aout<br>17H00 </div>   <!-- Heure de match-->
+               <div class=" noPad1 bl2 col-8">
+                   
+                   <div class="{{matchesGroup[21].class1}} win fsize">A. DES JEUN. </div>
+                   <div class="{{matchesGroup[21].class2}} win fsize">T.J.F</div>
+               </div>
+               <div class=" noPad text-center col-1"> <span class="{{matchesGroup[21].class1}} win">0</span><br> <span class="{{matchesGroup[21].class2}} lost" >0</span>  </div>
+                  
+            </div> <!-- end of div <match-n></match-n> --> 
+                  
+              <div class="row noPad knockoutline " >
+                  <div  class="text-center noPad"> Quart de Finale</div>
+               <div class="noPad text-center col-3 fsize21"> 28 Aout <br>17H00</div>   <!-- Heure de match-->
+               <div class=" noPad1 bl2  col-8">
+                   
+                   <div class="{{matchesGroup[22].class1}} win fsize">B. AUX PIEDS</div>
+                   <div class="{{matchesGroup[22].class2}} win fsize">TOUP P YO</div>
+               </div>
+               <div class=" noPad text-center col-1"> <span class="{{matchesGroup[22].class1}} lost"> 0</span><br> <span class="{{matchesGroup[22].class2}} win " >2</span>  </div>
+                  
+            </div> <!-- end of div <match-n></match-n> --> 
+                  
+              <div class="row noPad knockoutline " >
+                  <div  class="text-center noPad"> Quart de Finale</div>
+               <div class="noPad text-center col-3 fsize21"> 31 Aout<br>17H00</div>   <!-- Heure de match-->
+               <div class=" noPad1 bl2 col-8">
+                   
+                   <div class="{{matchesGroup[23].class1}} win fsize">LAVE LÈ</div>
+                   <div class="{{matchesGroup[23].class2}} win fsize">MONACO FC</div>
+               </div>
+               <div class=" noPad text-center col-1"> <span class="{{matchesGroup[23].class1}} win ">2</span><br> <span class="{{matchesGroup[23].class2}} lost" >0</span>  </div>
+                  
+            </div> <!-- end of div <match-n></match-n> --> 
+                  
+            </div>   <!-- end of huitieme de final -->
+
+
+               <!-- start of half final -->
+             <div class="match-n col-4 row classKnockout">
+
+                 
+               <div class="row noPad knockoutline knockoutspace" >
+                  <div  class="text-center noPad"> Demi Finale</div>
+               <div class="noPad text-center col-3 fsize21"> 08 Sept<br>17H00 </div>   <!-- Heure de match-->
+               <div class=" noPad1  col-8">
+                   
+                   <div class="{{matchesGroup[24].class1}} win fsize">LIMITE FC</div>
+                   <div class="{{matchesGroup[24].class2}} win fsize">A. DES JEUNES</div>
+               </div>
+               <div class=" noPad text-center col-1"> <span class="{{matchesGroup[24].class1}} win ">--</span><br> <span class="{{matchesGroup[24].class2}} win " >--</span>  </div>
+                  
+            </div> <!-- end of div <match-n></match-n> --> 
+
+              <div class="row noPad knockoutline knockoutspace" >
+                  <div  class="text-center noPad"> Demi Finale</div>
+               <div class="noPad text-center col-3 fsize21"> 09 Sept<br>17H00 </div>   <!-- Heure de match-->
+               <div class=" noPad1  col-8">
+                   
+                   <div class="{{matchesGroup[25].class1}} win fsize">TOUP POU YO</div>
+                   <div class="{{matchesGroup[25].class2}} win fsize">LAVE LÈ FC</div>
+               </div>
+               <div class=" noPad text-center col-1"> <span class="{{matchesGroup[25].class1}} win ">--</span><br> <span class="{{matchesGroup[25].class2}} win " >--</span>  </div>
+                  
+            </div> <!-- end of div <match-n></match-n> -->  
+                   
+            </div>   <!-- end of half final -->
+
+
+
+               
+               <!-- Start ofFinal -->  
+            <div class="match-n col-4 row classKnockout">
+               
+             <div class="row noPad knockoutline knockoutspace2" >
+                  <div  class="text-center noPad"> Finale</div>
+               <div class="noPad text-center col-3 fsize21"> 14 Sept<br>17H00 </div>   <!-- Heure de match-->
+               <div class=" noPad1  col-8">
+                   
+                   <div class="{{matchesGroup[26].class1}} win fsize">--</div>
+                   <div class="{{matchesGroup[26].class2}} win fsize">--</div>
+               </div>
+               <div class=" noPad text-center col-1"> <span class="{{matchesGroup[26].class1}} win ">--</span><br> <span class="{{matchesGroup[26].class2}} win " >--</span>  </div>
+                  
+            </div> <!-- end of div <match-n></match-n> -->  
+
+                  
+            </div> <!-- end ofFinal -->   
+            
+               
+            <div class="space"> </div>
+            
+               
+           </div>   
+                
+
+                <footer id="foot" class="row text-center">
+     
+            <section  class="col-sm-6">
+                <h4>INFO </h4>
+              <div class="row"> 
+                  <div class="col-6"> FC JANMET <br> <p class="fsize2"> Tenant du Titre (1)  </p></div>
+                  <div class="col-6"> FC JANMET <br> <p class="fsize2"> Le plus Titré (1) </p> </div>
+                  <br> <p class="fsize">EQUIPES PARTICIPANTES </p> <br> <p class="fsize"> 10</p>
+            <hr class=" d-sm-none">
+               
+               </div>
+          
+         </section>
+  
+         <section  class="col-sm-6">
+            <h4>LE COMITE ORGANISATEUR </h4>
+          <div class="row"> 
+              <div class="col-6"> Johnson TALLEYRAND <br> <p class="fsize2"> PRESIDENT </p></div>
+              <div class="col-6"> Wasken SEVERRE <br> <p class="fsize2">VICE-PRESIDENT </p> </div>
+              <div class="col-6"> Paul-Emile SAINT-JEAN <br> <p class="fsize2">RAPPORTEUR</p> </div>
+              <div class="col-6"> Walderme CHARLES<br> <p class="fsize2"> MEMBRE  </p></div>
+              <div class="col-6"> Erilien LAMANDIEU <br> <p class="fsize2">MEMBRE </p> </div>
+              <div class="col-6"> Marcov PETIT-HOMME <br> <p class="fsize2">MEMBRE </p> </div>
+              <div class="col-6"> Rocksen EXAEL<br> <p class="fsize2"> MEMBRE  </p></div>
+              <div class="col-6"> Eliders FLEURITUS <br> <p class="fsize2">MEMBRE </p> </div>
+              <div class="col-6"> Lucsonner LAGUERRE <br> <p class="fsize2">TRESORIER </p> </div>
+              <div class="col-6"> De Vinci EXAEL <br> <p class="fsize2">DELEGUE   </p></div>
+              <div class="col-6"> Morgan PETIT-HOMME <br> <p class="fsize2">DELEGUE ADJOINT  </p> </div>
+              <div class="col-6"> Jospin DORIVAL <br> <p class="fsize2">SECRETAIRE </p> </div>
+              
+              
+        <hr class=" d-sm-none">
+           
+           </div>
+      
+      </section>     
+            
+               <!---<section id="testimonials" class="col-sm-4">
+                   <h4> MEILLEURS COMMENTAIRES </h4>
+                 <p>"C'est étonnant aux yeux de toutes les anciennes fédérations du coin! Quelle nouveauté!!"</p>
+                 <p>"Le Comité a vraiment fait un travail exceptionnel cette année! Ce championnat est tout simplement remarquable!"</p>
+               </section> -->
+             <div class="text-center">&copy; TOU LIMEN 2025</div>
+           </footer>
+   
+        </div><!-- end of <div.container-fluid holder>     -->
+        </div>
+                  
+   
+
+
+
+
+        <script src="js/bootstrap.bundle.min.js">  </script>  
+        <script src="js/angular.min.js">  </script>
+
+        <script src="scripts/script.js"></script>
+    </body>
+    </html>
+              
